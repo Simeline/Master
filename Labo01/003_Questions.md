@@ -44,7 +44,6 @@ Disk Space: Use the df -h command to check the disk space. It will list the avai
   instance, record 5 round-trip times.
 
 ```
-Pinging the Instance:
 If you cannot ping the instance, it might be due to security group settings that block ICMP traffic (used for ping). Modify the instance's security group to allow ICMP traffic.
 After changing the settings, you can ping the instance and record the round-trip times using the ping command.
 ```
@@ -56,7 +55,6 @@ After changing the settings, you can ping the instance and record the round-trip
   with the machine?
 
 ```
-IP Address Differences:
 Run ifconfig (or ip addr show) to find the internal IP address of the EC2 instance. This is likely a private IP address.
 Compare this to the IP address you used to ping the instance, which is likely a public IP address.
 The difference is because AWS uses Network Address Translation (NAT) to map public IP addresses to private ones within its network, enabling instances to communicate with the internet.
