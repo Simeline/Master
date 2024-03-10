@@ -13,7 +13,7 @@ The largest instance types can be part of the u- series, like u-24tb1.metal, off
 * How long did it take for the new instance to get into the _running_ state?
 
 ```
-Time for Instance to Reach 'Running' State: The time it takes for an EC2 instance to transition to the 'running' state varies. Generally, it takes a few minutes, but this can be influenced by the instance type, the AMI used, the configuration, and the current load on AWS. When you launch an instance, it enters the pending state. The instance type that you specified at launch determines the hardware of the host computer for your instance. We use the Amazon Machine Image (AMI) you specified at launch to boot the instance. After the instance is ready for you, it enters the running state. As soon as your instance transitions to the running state, you're billed for each second, with a one-minute minimum, that you keep the instance running, even if the instance remains idle and you don't connect to it.
+Time for Instance to Reach 'Running' State: The time it takes for an EC2 instance to transition to the 'running' state varies. Generally, it takes a few minutes, but this can be influenced by the instance type, the AMI used, the configuration, and the current load on AWS. When you launch an instance, it enters the pending state. The instance type that you specified at launch determines the hardware of the host computer for your instance. We use the Amazon Machine Image (AMI) you specified at launch to boot the instance. After the instance is ready, it enters the running state. As soon as your instance transitions to the running state, you're billed for each second, with a one-minute minimum, that you keep the instance running, even if the instance remains idle and you don't connect to it.
 ```
 [AWS EC2 Instance Life](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
 
@@ -24,21 +24,18 @@ Time for Instance to Reach 'Running' State: The time it takes for an EC2 instanc
     * What's the difference between time here in Switzerland and the time set on
       the machine?
 ```
-
-Time Difference, Hypervisor Name, and Disk Space:
 Time Difference: You can find the time difference by comparing the local time in Switzerland (CEST or CET depending on the time of the year) with the time reported by the instance. Use the date command in the instance to check its time.
-Hypervisor Name: Run cat /sys/hypervisor/type on the EC2 instance to find out the name of the hypervisor.
-Disk Space: Use the df -h command to check the disk space. It will list the available, used, and total space on all mounted filesystems.
+
 ```
 
     * What's the name of the hypervisor?
 ```
-TODO
+Hypervisor Name: Run cat /sys/hypervisor/type on the EC2 instance to find out the name of the hypervisor.
 ```
 
     * How much free space does the disk have?
 ```
-TODO
+Disk Space: Use the df -h command to check the disk space. It will list the available, used, and total space on all mounted filesystems.
 ```
 
 
