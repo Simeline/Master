@@ -3,14 +3,18 @@
   instance?
 
 ```
-TODO
+Smallest and Biggest Instance Types: The smallest and largest EC2 instance types can vary based on the region and availability. The smallest instance type is typically something like a t2.nano, which offers 1 vCPU and 0.5 GB of memory.
+[AWS EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
+
+The largest instance types can be part of the u- series, like u-24tb1.metal, offering hundreds of vCPUs and several terabytes of RAM. 
+[AWS EC2 High Memory Instances](https://aws.amazon.com/ec2/instance-types/high-memory/)
 ```
 
-* How long did it take for the new instance to get into the _running_
-  state?
+* How long did it take for the new instance to get into the _running_ state?
 
 ```
-TODO
+Time for Instance to Reach 'Running' State: The time it takes for an EC2 instance to transition to the 'running' state varies. Generally, it takes a few minutes, but this can be influenced by the instance type, the AMI used, the configuration, and the current load on AWS.
+[instance life](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
 ```
 
 * Using the commands to explore the machine listed earlier, respond to
@@ -19,7 +23,11 @@ TODO
     * What's the difference between time here in Switzerland and the time set on
       the machine?
 ```
-TODO
+
+Time Difference, Hypervisor Name, and Disk Space:
+Time Difference: You can find the time difference by comparing the local time in Switzerland (CEST or CET depending on the time of the year) with the time reported by the instance. Use the date command in the instance to check its time.
+Hypervisor Name: Run cat /sys/hypervisor/type on the EC2 instance to find out the name of the hypervisor.
+Disk Space: Use the df -h command to check the disk space. It will list the available, used, and total space on all mounted filesystems.
 ```
 
     * What's the name of the hypervisor?
@@ -38,7 +46,9 @@ TODO
   instance, record 5 round-trip times.
 
 ```
-TODO
+Pinging the Instance:
+If you cannot ping the instance, it might be due to security group settings that block ICMP traffic (used for ping). Modify the instance's security group to allow ICMP traffic.
+After changing the settings, you can ping the instance and record the round-trip times using the ping command.
 ```
 
 * Determine the IP address seen by the operating system in the EC2
@@ -48,5 +58,8 @@ TODO
   with the machine?
 
 ```
-TODO
+IP Address Differences:
+Run ifconfig (or ip addr show) to find the internal IP address of the EC2 instance. This is likely a private IP address.
+Compare this to the IP address you used to ping the instance, which is likely a public IP address.
+The difference is because AWS uses Network Address Translation (NAT) to map public IP addresses to private ones within its network, enabling instances to communicate with the internet.
 ```
