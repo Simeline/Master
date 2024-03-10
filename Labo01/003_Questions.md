@@ -4,18 +4,19 @@
 
 ```
 Smallest and Biggest Instance Types: The smallest and largest EC2 instance types can vary based on the region and availability. The smallest instance type is typically something like a t2.nano, which offers 1 vCPU and 0.5 GB of memory.
-[AWS EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
-
 The largest instance types can be part of the u- series, like u-24tb1.metal, offering hundreds of vCPUs and several terabytes of RAM. 
-[AWS EC2 High Memory Instances](https://aws.amazon.com/ec2/instance-types/high-memory/)
+
 ```
+[AWS EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
+[AWS EC2 High Memory Instances](https://aws.amazon.com/ec2/instance-types/high-memory/)
 
 * How long did it take for the new instance to get into the _running_ state?
 
 ```
 Time for Instance to Reach 'Running' State: The time it takes for an EC2 instance to transition to the 'running' state varies. Generally, it takes a few minutes, but this can be influenced by the instance type, the AMI used, the configuration, and the current load on AWS.
-[instance life](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
 ```
+[instance life](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
+
 
 * Using the commands to explore the machine listed earlier, respond to
   the following questions and explain how you came to the answer:
