@@ -25,7 +25,7 @@ Time for Instance to Reach 'Running' State: The time it takes for an EC2 instanc
       the machine?
 ```
 Time Difference: You can find the time difference by comparing the local time in Switzerland (CEST or CET depending on the time of the year) with the time reported by the instance. Use the date command in the instance to check its time.
-
+Once connected, run the date command to display the current date and time set on the instance: date
 ```
 
     * What's the name of the hypervisor?
